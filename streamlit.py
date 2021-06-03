@@ -142,7 +142,7 @@ if type == 'Collabrative':
     
     df 
     
-    corr_mat = np.load('streamlit/item_colab_corr.npy')
+    corr_mat = np.load('streamlit/item_colab.npy')
     ratings = pd.read_csv('streamlit/ratings.csv')
     
     @st.cache
