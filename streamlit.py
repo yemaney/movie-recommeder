@@ -16,7 +16,7 @@ def create_link(title):
 @st.cache
 def get_images(link):
     r = requests.get(link)
-    soup = BeautifulSoup(r.text, 'lxml')
+    soup = BeautifulSoup(r.text, 'html.parser')
     poster  = soup.find('img', class_="ipc-image")
     link = poster.get('src')
     return  link
